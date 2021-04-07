@@ -1,9 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace Kupo
+namespace Kupo.KupoHUD
 {
     public class KupoConsole : MonoBehaviour, IConsole
     {
@@ -55,9 +54,13 @@ namespace Kupo
 
         void Start()
         {
-        
+            if (InputField == null)
+            {
+                this.TryGetComponent<InputField>(out var comp);
+                if (comp == null)
+                    Debug.LogError("KupoConsole Input is null!");
+            }
         }
-
 
         void Update()
         {
