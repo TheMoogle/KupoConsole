@@ -1,0 +1,16 @@
+{
+	"name": "com.github.themoogle.kupo",
+	"displayName": "Kupo Console",
+	"version": "0.1.0",
+	"unity": "2020.3",
+	"unityRelease": "1f1",
+	"description": "Simple Console System",
+	"keywords": [
+        "console"
+    ],
+	"author": {
+		"name": "TheMoogle",
+		"email": "gregh203s@gmail.com",
+		"url": "https://github.com/TheMoogle"
+	}
+}
