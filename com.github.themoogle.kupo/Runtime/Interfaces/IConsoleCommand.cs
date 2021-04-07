@@ -34,6 +34,6 @@ namespace Kupo
         /// <param name="invoker">Object that invoked the Command.</param>
         /// <param name="args">Arguments that the command uses.</param>
         /// <param name="output">Data the Command Returns</param>
-        void Invoke(GameObject invoker, string[] args, out CmdResponse output); // output object is Temp
+        void Invoke(GameObject invoker, string[] args, out CmdResponse output);
     }
 }

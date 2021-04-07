@@ -18,15 +18,23 @@ namespace Kupo
 
             var textSplit = input.Split(' ');
 
-            var h = new string[textSplit.Length - 1];
-            for (int i = 0; i < h.Length; i++)
+            string[] h;
+
+            if (textSplit.Length >= 2)
             {
-                if (i != 0)
+                h = new string[textSplit.Length - 1];
+                for (int i = 0; i < h.Length; i++)
                 {
-                    h[i - 1] = textSplit[i];
+                    if (i != 0)
+                    {
+                        h[i - 1] = textSplit[i];
+                    }
                 }
             }
-
+            else
+            {
+                h = textSplit;
+            }
 
             foreach (var cmd in consoleCommands)
             {
