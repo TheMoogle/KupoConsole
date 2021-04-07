@@ -37,14 +37,13 @@ namespace Kupo.KupoHUD
 
             foreach (var cmd in consoleCommands)
             {
-                if (cmd.Name == textSplit[0])
+                if (cmd.Name.ToLower() == textSplit[0].ToLower())
                 {
                     cmd.Invoke(this.gameObject, h, out var data);
+                    Debug.Log(data.ConsoleResponse);
+                    return;
                 }
             }
-
-            Debug.Log("COMMAND GO BRRRRRRRR");
-
         }
 
         public void RegisterCommand(IConsoleCommand command)
